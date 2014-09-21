@@ -1,28 +1,19 @@
-Brackets specRep - A Special Characters Replacer
+CloudConvert 2 Ocean - an HTML re-formatter
 ===
-Brackets extension that will replace certain special characters (listed below) for ease of use when creating/editing emails for campaign purposes.
+Brackets extension that will reformat CloudConvert HTML documents to Ocean 2.0 style HTML.
 
-Replaced characters (minus the '.'):
+
+Replacement Steps:
 ===
-short dash to &.ndash;
 
-long dash to &.mdash;
-
-£ to &.pound;
-
-:tm: to the TM logo &.#153;
-
-:tick: to a heavy ascii tick &.#10004;
-
-:c: to the copyright logo &.#169;
-
-:r: to the registered logo &.#174;
-
-’ and ‘ to '
-
-“ and ” to "
-
-& (with a space on either side) to &.amp;
+. Replace HTML header with Ocean 2.0 header, trying to detect metadata
+. Replace unecessary HTML entities
+. Identify and replace section headers
+. Identify and replace subheaders
+. Replace all paragraphs tags with Ocean ids
+. Place spaces around m-dashes
+. Pull down names dictionary and auto-replace as many as possible
+. Change remaining straight quotes to curly 
 
 
 Installation
@@ -39,7 +30,7 @@ Usage
 =====
 Open or create a new file.
 
-Once ready to switch characters, hit File > Replace Specials (or press Ctrl-Alt-0) to run the extension.
+Once ready to switch characters, hit __File > CloudConvert to Ocean__ (or press Ctrl-Alt-0) to run the extension.
 
 You can then save the changes after, or hit undo to completely undo the action.
 
