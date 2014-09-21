@@ -1,0 +1,22 @@
+{
+    "name": "brackets-cloudcovert2ocean",
+    "title": "Cloudconvert to Ocean - HTML Format Conversion",
+    "version": "1.0.1",
+    "description": "Extension that reformats Cloudconvert HTML into Ocean 2.0 HTML",
+    "homepage": "https://github.com/",
+    "author": "Chad Jones (https://github.com/chadananda)",
+    "license": "MIT",
+    "categories":"snippets",
+    "keywords": [
+        "Cloudconvert",
+        "Ocean",
+		"replacement"
+    ],
+    "files": [
+        "main.js",
+        "README.md"
+    ],
+    "engines": {
+        "brackets": ">=0.30.0"
+    }
+}
