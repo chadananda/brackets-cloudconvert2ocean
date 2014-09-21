@@ -1,4 +1,4 @@
-CloudConvert 2 Ocean - an HTML re-formatter
+CloudConvert 2 Ocean - HTML reformatter
 ===
 Brackets extension that will reformat CloudConvert HTML documents to Ocean 2.0 style HTML.
 
