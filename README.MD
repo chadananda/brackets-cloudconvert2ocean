@@ -1,4 +1,4 @@
-CloudConvert 2 Ocean - HTML reformatter
+CloudConvert 2 Ocean
 ===
 Brackets extension that will reformat CloudConvert HTML documents to Ocean 2.0 style HTML.
 
@@ -6,14 +6,14 @@ Brackets extension that will reformat CloudConvert HTML documents to Ocean 2.0 s
 Replacement Steps:
 ===
 
-. Replace HTML header with Ocean 2.0 header, trying to detect metadata
-. Replace unecessary HTML entities
-. Identify and replace section headers
-. Identify and replace subheaders
-. Replace all paragraphs tags with Ocean ids
-. Place spaces around m-dashes
-. Pull down names dictionary and auto-replace as many as possible
-. Change remaining straight quotes to curly 
+1. Replace HTML header with Ocean 2.0 header, trying to detect metadata
+1. Replace unecessary HTML entities
+1. Identify and replace section headers
+1. Identify and replace subheaders
+1. Replace all paragraphs tags with Ocean ids
+1. Place spaces around m-dashes
+1. Pull down names dictionary and auto-replace as many as possible
+1. Change remaining straight quotes to curly 
 
 
 Installation
