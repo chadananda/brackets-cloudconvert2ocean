@@ -1,13 +1,12 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, regexp: true, indent: 4, maxerr: 50 */
 /*global define, $, brackets, window */
 
-/* jPARK - SpecRep v 0.1 */
-/* A Special Character Replacement Extension */
-/* Written by James Park 2013 */
-/* Extension that searches through and replaces any special characters with relevant code equivalent. */
-/* Mainly useful for email templates if created via Brackets */
+/* chadananda - cloudconvert2ocean v 0.1 */
+/* A Reformatter for CloudConvert HTML to Ocean style HTML */
+/* Written by Chad Jones 2014 */
+/* Extension that reformats CloudConvert HTML to Ocean 2.0 style HTML. */
+/* Mainly useful for migrating books from DocX to Ocean using CloudConvert to create clean HTML */
 
-/** Extension that searches through and replaces any special characters with relevant code equivalent. */
 define(function (require, exports, module) {
     "use strict";
 
@@ -15,9 +14,8 @@ define(function (require, exports, module) {
 		EditorManager  = brackets.getModule("editor/EditorManager"),
         Menus          = brackets.getModule("command/Menus");
 
-    
     // Function to run when the menu item is clicked
-    function replaceSpecials() {
+    function cloudconvert2ocean() {
 
         var mainWindow = EditorManager.getActiveEditor(),
             activeText = mainWindow.document;
@@ -30,6 +28,9 @@ define(function (require, exports, module) {
             var cursorPos = mainWindow.getCursorPos(),
                 scrollPos = mainWindow.getScrollPos();
 
+
+
+/*
 				htmlContent = htmlContent.replace(/\u2013/g,"&ndash;");
 				htmlContent = htmlContent.replace(/\u2014/g,"&mdash;");
 				htmlContent = htmlContent.replace(/\u0091/g,"'");
@@ -45,7 +46,8 @@ define(function (require, exports, module) {
 				htmlContent = htmlContent.replace(/“/g,"\"");
 				htmlContent = htmlContent.replace(/”/g,"\"");
 				htmlContent = htmlContent.replace(/\s&\s/g," &amp; ");
-			
+*/
+
 				activeText.setText(htmlContent);
 
             // restore cursor and scroll positions
@@ -57,20 +59,20 @@ define(function (require, exports, module) {
 
         return false;
 	}
-    
-    
+
+
     // First, register a command - a UI-less object associating an id to a handler
-    var MY_COMMAND_ID = "replace.specials";   // package-style naming to avoid collisions
-    CommandManager.register("Replace Specials", MY_COMMAND_ID, replaceSpecials);
+    var MY_COMMAND_ID = "cloudconvert2ocean.replace";   // package-style naming to avoid collisions
+    CommandManager.register("Cloudconvert to Ocean", MY_COMMAND_ID, cloudconvert2ocean);
 
     // Then create a menu item bound to the command
     // The label of the menu item is the name we gave the command (see above)
     var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
     //menu.addMenuItem(MY_COMMAND_ID);
-    
+
     // We could also add a key binding at the same time:
     menu.addMenuItem(MY_COMMAND_ID, "Ctrl-Alt-0");
     // (Note: "Ctrl" is automatically mapped to "Cmd" on Mac)
 
-    exports.replaceSpecials = replaceSpecials;
+    exports.cloudconvert2ocean = cloudconvert2ocean;
 });
